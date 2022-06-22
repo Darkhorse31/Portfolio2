@@ -19,14 +19,16 @@ $font-text: 'Prompt', sans-serif;
             background: linear-gradient(117deg, rgba(79, 62, 179, 1) 0%, rgba(179, 62, 62, 0.9976365546218487) 25%, rgba(34, 20, 159, 1) 97%);
             background-clip: text;
             -webkit-background-clip: text;
-            animation:zoomIn 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation:zoomInRight 1s ease-in-out;
             animation-fill-mode: forwards;
             &:hover {
                 animation-name:rubberBand;
                 animation-duration: 1s;
-                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-
-                filter: drop-shadow(5px 2px 0px rgba(179, 62, 62, 0.2));
+                animation-direction: alternate;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                filter: drop-shadow(5px 2px 0px rgba(52, 4, 114, 0.568));
                 
             }
 
