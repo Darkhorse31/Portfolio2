@@ -14,7 +14,6 @@ const Mainpage = () => {
   return (
     <div className="main_page">
       <Toppage/>
-     
     </div>
   );
 };
