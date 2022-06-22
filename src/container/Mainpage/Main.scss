@@ -1,0 +1,20 @@
+.main_page {
+    width: calc(100% - 270px);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    margin-left: 270px;
+    display: flex;
+    flex-direction: column;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    h3 {
+        text-align: center;
+        font-size: 48px;
+
+        opacity: 0;
+    }
+}

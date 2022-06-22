@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.scss";
+import React, { useState } from "react";
+import Mainpage from "./container/Mainpage/Mainpage";
+import theam from "./container/them";
+import Sidebar from "./container/Sidebar/Sidebar";
 function App() {
+  const [ThemeState, settheam] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{
+        backgroundColor:
+          ThemeState === false ? theam.dark.background : theam.light.background,
+        color: ThemeState === false ? theam.dark.text : theam.light.text,
+      }}
+    >
+     <div className="cursor"></div>
+      <Sidebar />
+      <Mainpage />
     </div>
   );
 }
